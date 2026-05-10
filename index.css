@@ -241,6 +241,76 @@ a {
     gap: 14px;
 }
 
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 32px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 24px;
+    padding: 34px;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form .form-header p {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: #60a5fa;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-header h3 {
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    margin-bottom: 0;
+    color: #f8fafc;
+}
+
+.contact-form label {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 18px;
+    color: #f8fafc;
+    padding: 16px 18px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+}
+
+.contact-form textarea {
+    min-height: 170px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 14px 32px;
+}
+
 /* Gallery Section */
 .gallery-grid {
     display: grid;
@@ -502,7 +572,8 @@ a {
     .hero-section,
     .about-grid,
     .project-grid,
-    .skills-grid {
+    .skills-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
     .site-header {
@@ -523,7 +594,8 @@ a {
     .project-card,
     .info-card,
     .hero-card__item,
-    .contact-card {
+    .contact-card,
+    .contact-form {
         padding: 22px;
     }
 }
